@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  font-family: "Clash Grotesk", sans-serif;
+  background-color: #fff;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: black;
+  border: 1px solid blue;
+}
+.album {
+  color: gold;
+  font-size: 24px;
+}
+.share {
+  font-weight: 600;
+  font-size: 30px;
+  color: #fff;
+}
+.btn-group {
+  width: 15%;
+}
+.btn1 {
+  background-color: gold;
+  border: 1px solid gold;
+  padding: 10px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.btn2 {
+  background-color: #fff;
+  border: 1px solid #fff;
+  padding: 10px;
+  width: 40%;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.btn3 {
+  background-color: black;
+  border: 1px solid #fff;
+  padding: 10px;
+  color: #fff;
+  border-radius: 27px;
+  cursor: pointer;
+}
+.container {
+  margin: 1% 5%;
+}
+.back button {
+  display: flex;
+  gap: 1em;
+  background: none;
+  border: none;
+  font-size: 18px;
+  cursor: pointer;
+}
+.back i {
+  position: relative;
+  top: 0.1em;
+}
+.header-options {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1em;
+}
+.opt1,
+.opt2 {
+  display: flex;
+  gap: 1em;
+}
+.opt1 div {
+  font-weight: 600;
+}
+.opt2 img {
+  cursor: pointer;
+}
+.hr {
+  position: relative;
+  bottom: 0.6em;
+}
+.part1 {
+  display: flex;
+  gap: 0.9em;
+}
+.part1 img {
+  width: 100%;
+  border-radius: 8px;
+}
+.part2 {
+  display: flex;
+  gap: 0.9em;
+}
+.part2 img {
+  width: 98%;
+  border-radius: 8px;
+}
+.img-name {
+  font-weight: 600;
+}
+.date {
+  color: lightgray;
+  margin-top: -1em;
+}
+/* Pagination */
+.pagination {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+}
+
+.pagination li {
+  margin-right: 5px;
+}
+
+.pagination a {
+  display: block;
+  padding: 8px 12px;
+  text-decoration: none;
+  background-color: #f4f4f4;
+  color: #333;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.pagination a:hover {
+  background-color: #ddd;
+}
+
+.pagination .active {
+  background-color: #333;
+  color: #fff;
+}
+
+@media (min-width: 1369px) {
+  .part1,
+  .part2 {
+    justify-content: center;
+  }
+}

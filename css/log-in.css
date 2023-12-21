@@ -1,0 +1,97 @@
+body {
+  margin: 0;
+  font-family: "Clash Grotesk", sans-serif;
+  background-color: lightgray;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1.8% 25%;
+  background-color: #fff;
+  border-radius: 8px;
+}
+.album {
+  color: gold;
+  font-size: 24px;
+}
+.share {
+  font-weight: 600;
+  font-size: 30px;
+}
+p {
+  margin-top: -1%;
+  font-size: 20px;
+}
+.email {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+.email input {
+  padding: 15px 10px;
+  width: 95%;
+  background-color: lightgray;
+  border: none;
+  border-radius: 5px;
+  border-bottom: 1px solid black;
+  outline: none;
+}
+.password {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+  position: relative;
+}
+.password input {
+  padding: 15px 10px;
+  width: 95%;
+  background-color: lightgray;
+  border: none;
+  border-radius: 5px;
+  border-bottom: 1px solid black;
+  outline: none;
+}
+.password-eye {
+  position: absolute;
+  top: 65%;
+  right: 1em;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+.remember-me {
+  display: flex;
+  gap: 14em;
+  width: 35vw;
+  margin-bottom: 2em;
+}
+.check input {
+  cursor: pointer;
+}
+.submit-btn {
+  width: 100%;
+  padding: 20px;
+  background-color: gold;
+  border: 1px solid gold;
+  border-radius: 8px;
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 2em;
+  cursor: pointer;
+}
+.submit-btn:hover {
+  background-color: white;
+  border: 1px solid gold;
+}
+.sign-up {
+  margin-bottom: 2em;
+}
+.sign-up a {
+  color: gold;
+}
+hr {
+  border: 1px solid lightblue;
+  width: 90%;
+  margin-bottom: 1em;
+}
