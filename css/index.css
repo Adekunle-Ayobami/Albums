@@ -1,0 +1,90 @@
+body {
+  margin: 0;
+  font-family: "Clash Grotesk", sans-serif;
+  background-image: url("../images/mrs\ mimi.png");
+  background-size: cover;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  gap: 30em;
+  background-color: black;
+  /* border: 1px solid blue; */
+}
+.album {
+  color: #f0a500;
+  font-size: 24px;
+}
+.share {
+  font-weight: 600;
+  font-size: 30px;
+  color: #fff;
+}
+.btn-group {
+  width: 15%;
+}
+.btn1 {
+  background-color: #f0a500;
+  border: 1px solid #f0a500;
+  padding: 10px;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.btn1:hover {
+  background-color: black;
+  color: #fff;
+}
+.btn2 {
+  background-color: #fff;
+  border: 1px solid #fff;
+  padding: 10px;
+  width: 40%;
+  border-radius: 7px;
+  cursor: pointer;
+}
+.btn2:hover {
+  background-color: gold;
+  color: black;
+  border: 1px solid gold;
+}
+.inner-text {
+  padding-left: 7em;
+}
+.h1-text {
+  font-size: 110px;
+  color: #fff;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.btn3 {
+  background-color: #f0a500;
+  padding: 10px 20px;
+  border-radius: 8px;
+  border: 1px solid #f0a500;
+  font-weight: 600;
+  cursor: pointer;
+  position: relative;
+  top: -4em;
+}
+.btn3:hover {
+  background-color: transparent;
+}
+.pictures {
+  text-align: right;
+  overflow: hidden;
+  padding-right: 1em;
+}
+.pictures img {
+  width: 20%;
+  height: 30vh;
+  border-radius: 15px;
+  opacity: 0;
+  transform: translateX(100%);
+  animation: slideIn 1s forwards;
+}
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}

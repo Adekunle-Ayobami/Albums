@@ -23,7 +23,7 @@
         <h3 class="share"><span class="album">Album</span>SHARE</h3>
         <div class="btn-group">
           <button class="btn1">New album</button>
-          <button class="btn2">Login</button>
+          <button class="btn2" onclick="redirectToLogin()">Login</button>
         </div>
       </nav>
     </header>
@@ -40,12 +40,18 @@
         <div class="opt2">
           <img src="images/Frame 2.svg" alt="" />
           <img src="images/Frame1.svg" alt="" />
-          <button class="btn3">Add File</button>
+          <button
+            class="btn3"
+            onclick="document.getElementById('fileInput').click()"
+          >
+            Add File
+          </button>
+          <input type="file" id="fileInput" style="display: none" />
         </div>
       </div>
       <hr class="hr" />
       <div class="pictures">
-        <div class="part1">
+        <div class="part1" id="imageContainer">
           <div>
             <img src="images/th.jpg" alt="" />
             <p class="img-name">Name of Image.jpg</p>
@@ -90,9 +96,9 @@
           </div>
         </div>
       </div>
-      <div class="pagination">
+      <div>
         <ul class="pagination">
-          <li><a href="#">Prev</a></li>
+          <li class="disabled"><a href="#">Prev</a></li>
           <li><a href="#" class="active">1</a></li>
           <li><a href="#">2</a></li>
           <li><a href="#">3</a></li>
@@ -103,5 +109,82 @@
         </ul>
       </div>
     </div>
+
+    <script>
+      function redirectToLogin() {
+        // Redirect to the Album page
+        window.location.href = "login.html";
+      }
+
+      // Display selected file name (optional)
+      document
+        .getElementById("fileInput")
+        .addEventListener("change", function () {
+          var selectedFileName = document.getElementById("selectedFileName");
+          selectedFileName.textContent = this.files[0].name;
+        });
+
+      // document
+      //   .getElementById("fileInput")
+      //   .addEventListener("change", function () {
+      //     const imageContainer = document.getElementById("imageContainer");
+      //     const files = this.files;
+
+      //     for (let i = 0; i < files.length; i++) {
+      //       const file = files[i];
+      //       const reader = new FileReader();
+
+      //       reader.onload = function (e) {
+      //         const imageUrl = e.target.result;
+      //         const imgName = file.name;
+      //         const date = new Date(file.lastModified).toLocaleDateString();
+
+      //         const imageDiv = document.createElement("div");
+      //         imageDiv.innerHTML = `
+      //       <img src="${imageUrl}" alt="${imgName}" />
+      //       <p class="img-name">${imgName}</p>
+      //       <p class="date">${date}</p>
+      //     `;
+
+      //         imageContainer.appendChild(imageDiv);
+
+      //         saveImageDataToLocalStorage(imgName, imageUrl);
+      //       };
+
+      //       reader.readAsDataURL(file);
+      //     }
+      //   });
+
+      // window.addEventListener("load", function () {
+      //   const imageContainer = document.getElementById("imageContainer");
+      //   const savedImages = getSavedImagesFromLocalStorage();
+
+      //   savedImages.forEach(function (image) {
+      //     const { name, url, date } = image;
+
+      //     const imageDiv = document.createElement("div");
+      //     imageDiv.innerHTML = `
+      //     <img src="${url}" alt="${name}" />
+      //     <p class="img-name">${name}</p>
+      //     <p class="date">${date}</p>
+      //   `;
+
+      //     imageContainer.appendChild(imageDiv);
+      //   });
+      // });
+
+      // function saveImageDataToLocalStorage(name, url) {
+      //   const savedImages = getSavedImagesFromLocalStorage();
+      //   const date = new Date().toLocaleDateString();
+
+      //   savedImages.push({ name, url, date });
+      //   localStorage.setItem("savedImages", JSON.stringify(savedImages));
+      // }
+
+      // function getSavedImagesFromLocalStorage() {
+      //   const savedImagesJSON = localStorage.getItem("savedImages");
+      //   return savedImagesJSON ? JSON.parse(savedImagesJSON) : [];
+      // }
+    </script>
   </body>
 </html>

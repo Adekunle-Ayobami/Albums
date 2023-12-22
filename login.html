@@ -9,6 +9,7 @@
       href="https://api.fontshare.com/v2/css?f[]=clash-grotesk@400&display=swap"
       rel="stylesheet"
     />
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
   </head>
   <body>
     <div class="container">
@@ -25,13 +26,14 @@
             required
           />
         </div>
-        <div class="password">
+        <div class="login-password">
           <label for="">Password</label>
           <input
+            id="password"
             type="password"
             placeholder="Enter your password"
-            autocomplete="new-password"
             required
+            autocomplete="current-password"
           />
           <img class="password-eye" src="images/show.svg" alt="" />
         </div>
@@ -41,10 +43,32 @@
           </div>
           <div class="forget-pass">Forget Password?</div>
         </div>
-        <input class="submit-btn" type="submit" name="submit" value="Log In" />
+        <input
+          onclick="redirectToAlbum()"
+          class="submit-btn"
+          type="submit"
+          name="submit"
+          value="Log In"
+        />
       </form>
       <hr />
       <div class="sign-up">No account yet? <a href="#">Sign Up</a></div>
     </div>
+
+    <script>
+      $(document).ready(function () {
+        $(".password-eye").click(function () {
+          const passwordInput = $("#password");
+          const type =
+            passwordInput.attr("type") === "password" ? "text" : "password";
+          passwordInput.attr("type", type);
+        });
+      });
+
+      function redirectToAlbum() {
+        // Redirect to the Album page
+        window.location.href = "album.html";
+      }
+    </script>
   </body>
 </html>

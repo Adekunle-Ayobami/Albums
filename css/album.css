@@ -7,11 +7,12 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-around;
+  /* gap: 30em; */
   background-color: black;
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
 }
 .album {
-  color: gold;
+  color: #f0a500;
   font-size: 24px;
 }
 .share {
@@ -23,11 +24,15 @@ body {
   width: 15%;
 }
 .btn1 {
-  background-color: gold;
-  border: 1px solid gold;
+  background-color: #f0a500;
+  border: 1px solid #f0a500;
   padding: 10px;
   border-radius: 7px;
   cursor: pointer;
+}
+.btn1:hover {
+  background-color: black;
+  color: #fff;
 }
 .btn2 {
   background-color: #fff;
@@ -37,6 +42,11 @@ body {
   border-radius: 7px;
   cursor: pointer;
 }
+.btn2:hover {
+  background-color: gold;
+  color: black;
+  border: 1px solid gold;
+}
 .btn3 {
   background-color: black;
   border: 1px solid #fff;
@@ -44,6 +54,11 @@ body {
   color: #fff;
   border-radius: 27px;
   cursor: pointer;
+}
+.btn3:hover {
+  background-color: #fff;
+  color: black;
+  border: 1px solid black;
 }
 .container {
   margin: 1% 5%;
@@ -78,7 +93,7 @@ body {
 }
 .hr {
   position: relative;
-  bottom: 0.6em;
+  bottom: 0.5em;
 }
 .part1 {
   display: flex;
@@ -126,7 +141,10 @@ body {
   border-radius: 4px;
   transition: background-color 0.3s;
 }
-
+.pagination .disabled a {
+  color: #ccc;
+  cursor: not-allowed;
+}
 .pagination a:hover {
   background-color: #ddd;
 }
