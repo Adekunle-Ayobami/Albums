@@ -20,7 +20,9 @@
   <body>
     <header>
       <nav class="nav">
-        <h3 class="share"><span class="album">Album</span>SHARE</h3>
+        <a href="./index.html">
+          <h3 class="share"><span class="album">Album</span>SHARE</h3>
+        </a>
         <div class="btn-group">
           <button class="btn1">New album</button>
           <button class="btn2" onclick="redirectToLogin()">Login</button>
@@ -29,17 +31,19 @@
     </header>
     <div class="container">
       <div class="back">
-        <button><i class="fa-solid fa-angle-left"></i> Back</button>
+        <button onclick="history.back()">
+          <i class="fa-solid fa-angle-left"></i> Back
+        </button>
       </div>
       <div class="header-options">
         <div class="opt1">
-          <div>All</div>
-          <div>Images</div>
-          <div>Videos</div>
+          <div class="all" onclick="toggleAlbum('all')">All</div>
+          <div class="album-images" onclick="toggleAlbum('images')">Images</div>
+          <div class="album-videos" onclick="toggleAlbum('videos')">Videos</div>
         </div>
         <div class="opt2">
-          <img src="images/Frame 2.svg" alt="" />
-          <img src="images/Frame1.svg" alt="" />
+          <img class="frame2" src="images/Frame 2.svg" alt="" />
+          <img class="frame1" src="images/Frame1.svg" alt="" />
           <button
             class="btn3"
             onclick="document.getElementById('fileInput').click()"
@@ -53,49 +57,191 @@
       <div class="pictures">
         <div class="part1" id="imageContainer">
           <div>
-            <img src="images/th.jpg" alt="" />
+            <img src="images/Media-card1.png" alt="" />
             <p class="img-name">Name of Image.jpg</p>
             <p class="date">21/12/2023</p>
           </div>
           <div>
-            <img src="images/th.jpg" alt="" />
+            <img src="images/Media-card2.png" alt="" />
             <p class="img-name">Name of Image.jpg</p>
             <p class="date">21/12/2023</p>
           </div>
           <div>
-            <img src="images/th.jpg" alt="" />
+            <img src="images/Media-card1.png" alt="" />
             <p class="img-name">Name of Image.jpg</p>
             <p class="date">21/12/2023</p>
           </div>
           <div>
-            <img src="images/th.jpg" alt="" />
+            <img src="images/Media-card2.png" alt="" />
             <p class="img-name">Name of Image.jpg</p>
             <p class="date">21/12/2023</p>
           </div>
         </div>
         <div class="part2">
           <div>
-            <img src="images/th.jpg" alt="" />
+            <img src="images/Media-card3.png" alt="" />
             <p class="img-name">Name of Image.jpg</p>
             <p class="date">21/12/2023</p>
           </div>
           <div>
-            <img src="images/th.jpg" alt="" />
+            <img src="images/Media-card4.png" alt="" />
             <p class="img-name">Name of Image.jpg</p>
             <p class="date">21/12/2023</p>
           </div>
           <div>
-            <img src="images/th.jpg" alt="" />
+            <img src="images/Media-card3.png" alt="" />
             <p class="img-name">Name of Image.jpg</p>
             <p class="date">21/12/2023</p>
           </div>
           <div>
-            <img src="images/th.jpg" alt="" />
+            <img src="images/Media-card4.png" alt="" />
             <p class="img-name">Name of Image.jpg</p>
             <p class="date">21/12/2023</p>
           </div>
         </div>
       </div>
+      <div class="pictures-all">
+        <div class="part1" id="imageContainer">
+          <div>
+            <img src="images/Media-card3.png" alt="" />
+            <p class="img-name">Name of Image.jpg</p>
+            <p class="date">21/12/2023</p>
+          </div>
+          <div>
+            <img src="images/Media-card4.png" alt="" />
+            <p class="img-name">Name of Image.jpg</p>
+            <p class="date">21/12/2023</p>
+          </div>
+          <div>
+            <img src="images/Media-card3.png" alt="" />
+            <p class="img-name">Name of Image.jpg</p>
+            <p class="date">21/12/2023</p>
+          </div>
+          <div>
+            <img src="images/Media-card4.png" alt="" />
+            <p class="img-name">Name of Image.jpg</p>
+            <p class="date">21/12/2023</p>
+          </div>
+        </div>
+        <div class="part2">
+          <div>
+            <img src="images/Media-card3.png" alt="" />
+            <p class="img-name">Name of Image.jpg</p>
+            <p class="date">21/12/2023</p>
+          </div>
+          <div>
+            <img src="images/Media-card4.png" alt="" />
+            <p class="img-name">Name of Image.jpg</p>
+            <p class="date">21/12/2023</p>
+          </div>
+          <div>
+            <img src="images/Media-card3.png" alt="" />
+            <p class="img-name">Name of Image.jpg</p>
+            <p class="date">21/12/2023</p>
+          </div>
+          <div>
+            <img src="images/Media-card4.png" alt="" />
+            <p class="img-name">Name of Image.jpg</p>
+            <p class="date">21/12/2023</p>
+          </div>
+        </div>
+      </div>
+      <div class="videos-all">
+        <div class="part1" id="imageContainer">
+          <div>
+            <img src="images/Media-card1.png" alt="" />
+            <p class="img-name">Name of Image.jpg</p>
+            <p class="date">21/12/2023</p>
+          </div>
+          <div>
+            <img src="images/Media-card2.png" alt="" />
+            <p class="img-name">Name of Image.jpg</p>
+            <p class="date">21/12/2023</p>
+          </div>
+          <div>
+            <img src="images/Media-card1.png" alt="" />
+            <p class="img-name">Name of Image.jpg</p>
+            <p class="date">21/12/2023</p>
+          </div>
+          <div>
+            <img src="images/Media-card2.png" alt="" />
+            <p class="img-name">Name of Image.jpg</p>
+            <p class="date">21/12/2023</p>
+          </div>
+        </div>
+        <div class="part1" id="imageContainer">
+          <div>
+            <img src="images/Media-card1.png" alt="" />
+            <p class="img-name">Name of Image.jpg</p>
+            <p class="date">21/12/2023</p>
+          </div>
+          <div>
+            <img src="images/Media-card2.png" alt="" />
+            <p class="img-name">Name of Image.jpg</p>
+            <p class="date">21/12/2023</p>
+          </div>
+          <div>
+            <img src="images/Media-card1.png" alt="" />
+            <p class="img-name">Name of Image.jpg</p>
+            <p class="date">21/12/2023</p>
+          </div>
+          <div>
+            <img src="images/Media-card2.png" alt="" />
+            <p class="img-name">Name of Image.jpg</p>
+            <p class="date">21/12/2023</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="list-view">
+        <table class="table">
+          <tr>
+            <th>Name</th>
+            <th>Created</th>
+          </tr>
+          <tr>
+            <td class="td" colspan="2">
+              <img class="img1" src="images/Media-card1.png" alt="" />
+              <div style="display: flex; flex-direction: column">
+                <span>Name of Image.jpg</span>
+                <span class="size">File Size: 598KB</span>
+              </div>
+            </td>
+            <td>20/06/2023 at 11:03am</td>
+          </tr>
+          <tr>
+            <td class="td" colspan="2">
+              <img class="img1" src="images/Media-card2.png" alt="" />
+              <div style="display: flex; flex-direction: column">
+                <span>Name of Image.jpg</span>
+                <span class="size">File Size: 598KB</span>
+              </div>
+            </td>
+            <td>20/06/2023 at 11:03am</td>
+          </tr>
+          <tr>
+            <td class="td" colspan="2">
+              <img class="img1" src="images/Media-card3.png" alt="" />
+              <div style="display: flex; flex-direction: column">
+                <span>Name of Image.jpg</span>
+                <span class="size">File Size: 598KB</span>
+              </div>
+            </td>
+            <td>20/06/2023 at 11:03am</td>
+          </tr>
+          <tr>
+            <td class="td" colspan="2">
+              <img class="img1" src="images/Media-card4.png" alt="" />
+              <div style="display: flex; flex-direction: column">
+                <span>Name of Image.jpg</span>
+                <span class="size">File Size: 598KB</span>
+              </div>
+            </td>
+            <td>20/06/2023 at 11:03am</td>
+          </tr>
+        </table>
+      </div>
+
       <div>
         <ul class="pagination">
           <li class="disabled"><a href="#">Prev</a></li>
@@ -123,6 +269,44 @@
           var selectedFileName = document.getElementById("selectedFileName");
           selectedFileName.textContent = this.files[0].name;
         });
+
+      function toggleAlbum(albumType) {
+        var pictures = document.querySelector(".pictures");
+        var picturesAll = document.querySelector(".pictures-all");
+        var videosAll = document.querySelector(".videos-all");
+
+        // Remove 'active' class from all options
+        var options = document.querySelectorAll(".opt1 div");
+        options.forEach((option) => option.classList.remove("active"));
+
+        if (albumType === "images") {
+          pictures.style.display = "none";
+          picturesAll.style.display = "block";
+          videosAll.style.display = "none";
+        } else if (albumType === "videos") {
+          pictures.style.display = "none";
+          picturesAll.style.display = "none";
+          videosAll.style.display = "block";
+        } else {
+          pictures.style.display = "block";
+          picturesAll.style.display = "none";
+          videosAll.style.display = "none";
+        }
+
+        // Add 'active' class to the clicked option
+        document.querySelector(`.album-${albumType}`).classList.add("active");
+      }
+
+      // Add event listeners for frame1 and frame2
+      document.querySelector(".frame1").addEventListener("click", function () {
+        document.querySelector(".list-view").style.display = "block";
+        document.querySelector(".pictures").style.display = "none";
+      });
+
+      document.querySelector(".frame2").addEventListener("click", function () {
+        document.querySelector(".list-view").style.display = "none";
+        document.querySelector(".pictures").style.display = "block";
+      });
 
       // document
       //   .getElementById("fileInput")

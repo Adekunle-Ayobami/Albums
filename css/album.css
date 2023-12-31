@@ -11,6 +11,9 @@ body {
   background-color: black;
   /* border: 1px solid blue; */
 }
+.nav a {
+  text-decoration: none;
+}
 .album {
   color: #f0a500;
   font-size: 24px;
@@ -43,9 +46,9 @@ body {
   cursor: pointer;
 }
 .btn2:hover {
-  background-color: gold;
+  background-color: #f0a500;
   color: black;
-  border: 1px solid gold;
+  border: 1px solid #f0a500;
 }
 .btn3 {
   background-color: black;
@@ -101,6 +104,7 @@ body {
 }
 .part1 img {
   width: 100%;
+  max-width: 100%;
   border-radius: 8px;
 }
 .part2 {
@@ -113,10 +117,59 @@ body {
 }
 .img-name {
   font-weight: 600;
+  margin-left: 0.7em;
 }
 .date {
   color: lightgray;
   margin-top: -1em;
+  margin-left: 0.7em;
+}
+.size {
+  color: lightgray;
+}
+
+.opt1 div {
+  cursor: pointer;
+  border-bottom: 2px solid transparent;
+}
+.opt1 div.active {
+  border-bottom: 2px solid black;
+}
+
+.pictures-all {
+  display: none;
+}
+.videos-all {
+  display: none;
+}
+.all,
+.album-images,
+.album-videos {
+  cursor: pointer;
+}
+
+.list-view {
+  display: none;
+}
+.list-view img {
+  width: 10%;
+}
+.table {
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+th {
+  background-color: #eaeaea;
+  border-top: 1px solid #dde1e6;
+  padding: 10px;
+  border-collapse: collapse;
+}
+
+.td {
+  display: flex;
+  padding-top: 10px;
+  padding-bottom: 20px;
 }
 /* Pagination */
 .pagination {

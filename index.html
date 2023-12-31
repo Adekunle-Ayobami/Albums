@@ -17,7 +17,7 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body>
+  <body id="background-container">
     <header>
       <nav class="nav">
         <h3 class="share"><span class="album">Album</span>SHARE</h3>
@@ -29,13 +29,47 @@
     </header>
     <div class="inner-text">
       <h1 class="h1-text">Kemi's Birthday Celebration</h1>
-      <button class="btn3">View Album</button>
+      <button class="btn3" onclick="loadToAlbum()">View Album</button>
     </div>
 
-    <div class="pictures">
+    <!-- <div class="pictures">
       <img src="images/mrs kemi.png" class="active" alt="" />
       <img src="images/Rectangle 11.png" alt="" />
       <img src="images/th.jpg" alt="" />
-    </div>
+    </div> -->
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        // Array of image URLs
+        var images = [
+          "images/mrs-mimi2.png",
+          "images/mrs mimi.png",
+          // Add more image URLs as needed
+        ];
+
+        // Function to set a random background image
+        function setRandomBackground() {
+          var randomIndex = Math.floor(Math.random() * images.length);
+          var imageUrl = "url('" + images[randomIndex] + "')";
+          document.getElementById(
+            "background-container"
+          ).style.backgroundImage = imageUrl;
+        }
+
+        // Initial background set
+        setRandomBackground();
+
+        // Change the background every 10 seconds (10000 milliseconds)
+        setInterval(setRandomBackground, 5000);
+      });
+
+      function redirectToLogin() {
+        window.location.href = "login.html"; //
+      }
+
+      function loadToAlbum() {
+        window.location.href = "album.html"; //
+      }
+    </script>
   </body>
 </html>
